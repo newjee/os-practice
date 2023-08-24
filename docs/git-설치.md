@@ -67,3 +67,5 @@ export PATH=$PATH:/usr/local/poscodx2023/git/bin
 # git clone https://github.com/poscodx-bitacademy/java-study.git
 # cd java-study
 # mvn clean package
+# /usr/local/poscodx2023/maven3.8/bin/mvn clean package
+# /usr/local/poscodx2023/my-workspace/java-study/network/target# java -cp finaltest.jar echo.EchoServer
