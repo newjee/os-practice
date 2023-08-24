@@ -1,79 +1,69 @@
-git 2.9.5 설치
+## git 2.9.5 설치
 
 1. 의존성 라이브러리
 ```sh
-   # yum install curl-devel
-   # yum install expat-devel
-   # yum install gettext-devel
-   # yum install openssl-devel
-   # yum install zlib-devel
-   # yum install perl-devel
-
-3. 다운로드
-   # wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz
-
-4. 압축 풀기
-  # tar xvfz git-2.9.5.tar.gz
-
-4.소스 디렉토리
-  # cd git-2.9.5
-  # pwd
-
-5. configure
-  # ./configure --prefix=/usr/local/douzone/git
-
-6. 빌드
-  # make all
-   
-7. 설치
-  # make install
-
-8. 설정(/etc/profile)
-# git
-PATH=$PATH:/usr/local/douzone/git/bin
-
-9. git 환경 설정
-
-# git config --global user.name "douzone-busan-bitacademy"
-# git config --global user.email "douzone.busan.bitacademy@gmail.com"
-
-10. git 사용하기
-
-# mkdir centos-practices
-# cd centos-practices
-# git init
-# git add -A
-# git commit -m "first commit"
-# git branch -M main
-# git remote add origin https://github.com/douzone-bipa/centos-practices.git
-# git push -u origin main
-
-================
-# git add -A
-# git commit -m "...."
-# git push 
-
-
-=========================================================
-
-
-# git clone https://github.com/douzone-bipa/javastudy.git
-# cd javastudy
-# mvn clean package
+# yum -y install curl-devel
+# yum -y install expat-devel
+# yum -y install gettext-devel
+# yum -y install openssl-devel
+# yum -y install zlib-devel
+# yum -y install perl-devel
 ```
 
+2. 다운로드
+```sh
+# wget --no-check-certificate https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz
+```
 
+3. 압축 풀기
+```sh
+# tar xvfz git-2.9.5.tar.gz
+```
 
+4.소스 디렉토리 이동
+```sh
+  # cd git-2.9.5
+```
 
+5. configure compile & build Environment
+```sh   
+# ./configure --prefix=/usr/local/poscodx2023/git
+```
 
+6. 빌드
+```sh
+# make all
+```
+   
+7. 설치
+```sh   
+# make install
+```
 
+8. old version 처리
+```sh
+# whereis git
+git: /usr/bin/git /usr/share/man/man1/git.1.gz
+# mv /usr/bin/git /usr/bin/git.old
+# ln -s /usr/local/poscodx2023/git/bin/git /usr/bin/git
+# git --version
+git version 2.9.5
+```
+   
+8. 설정(/etc/profile)
+```sh
+export PATH=$PATH:/usr/local/poscodx2023/git/bin
+```
 
+9. 확인
+```sh   
+# git --version
+```
 
-
-  
-
-
-
-
-
-
+10. git 사용하기
+```sh
+# mkdir my-workspace
+# cd my-workspace
+# git clone https://github.com/poscodx-bitacademy/java-study.git
+# cd java-study
+# mvn clean package
