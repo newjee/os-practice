@@ -1,5 +1,5 @@
 git 2.9.5 설치
-
+```sh
 1. 의존성 라이브러리
    # yum install curl-devel
    # yum install expat-devel
@@ -59,7 +59,7 @@ PATH=$PATH:/usr/local/douzone/git/bin
 # git clone https://github.com/douzone-bipa/javastudy.git
 # cd javastudy
 # mvn clean package
-
+```
 
 
 
